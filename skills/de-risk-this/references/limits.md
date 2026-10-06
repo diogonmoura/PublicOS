@@ -1,7 +1,7 @@
 # Limits of the Model
 
 Read this before delivering any verdict. A skill that applies Cagan without knowing
-where he is weak produces confident bad advice.
+where they are weak produces confident bad advice.
 
 ## 1. It assumes autonomy that is often absent
 
@@ -10,9 +10,9 @@ regulated organisations. Applied without executive backing, it produces **frustr
 rather than transformation** — a team that knows the standard, cannot reach it, and
 now resents the gap.
 
-*When this matters:* diagnose mode, applied to an org Diogo does not control. Say so
-explicitly rather than issuing findings he has no lever on.
-*When this does not matter:* Diogo's own projects, where he is the empowered team.
+*When this matters:* diagnose mode, applied to an org the user does not control. Say so
+explicitly rather than issuing findings they have no lever on.
+*When this does not matter:* the user's own projects, where they are the empowered team.
 This is the default assumption for this skill.
 
 ## 2. The evidence base is anecdotal

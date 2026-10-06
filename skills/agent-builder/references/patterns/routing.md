@@ -15,9 +15,9 @@ Use when:
 - When all inputs need the same handling, just with different parameters → just parameterise a single prompt
 - When routes aren't mutually exclusive → use Parallelization instead
 
-## DiogoOS stage to start at
+## Stage to start at
 
-**Stage 1 (Manual).** Log which route was taken on every run. Diogo checks that the classifier is making the right call. Promote to Stage 2 once routing decisions are consistently correct across 3+ real runs.
+**Stage 1 (Manual).** Log which route was taken on every run. The user checks that the classifier is making the right call. Promote to Stage 2 once routing decisions are consistently correct across 3+ real runs.
 
 ## Model tier
 
@@ -32,8 +32,8 @@ Use when:
 **Inbox triage skill:**
 - Haiku classifies each item: meeting transcript / action item / FYI / noise
 - "Meeting transcript" → triggers harvest-teams-transcripts + meeting-to-tasks
-- "Action item" → writes directly to the Notion To Dos database
-- "FYI" → archives to inbox/
+- "Action item" → writes directly to a task tracker
+- "FYI" → archives to an inbox folder
 - "Noise" → discards
 
 ## Judgment rules

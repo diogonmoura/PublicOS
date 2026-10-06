@@ -35,4 +35,4 @@
 
 ## Open corrections
 
-_(Anything Diogo changed by hand. Fold these into the skill's Judgment rules.)_
+_(Anything the user changed by hand. Fold these into the skill's Judgment rules.)_

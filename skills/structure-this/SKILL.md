@@ -1,20 +1,20 @@
 ---
 name: structure-this
-description: Use when Diogo has something to write — an email, a Teams message, a deck, or a Confluence page — or a draft that isn't landing, and wants it structured answer-first.
+description: Use when the user has something to write — an email, a Teams message, a deck, or a Confluence page — or a draft that isn't landing, and wants it structured answer-first.
 ---
 
 # Structure This
 
 Applies Barbara Minto's Pyramid Principle (Financial Times / Prentice Hall edition,
-10 chapters in 2 parts) to what Diogo actually writes.
+10 chapters in 2 parts) to what the user actually writes.
 
-The value of this skill is not "put the answer first" — Diogo already knows that. The
+The value of this skill is not "put the answer first" — the user already knows that. The
 value is chapters 7–9, which are the hard ones. So this skill is built as **gates that
 block**, not as a formatting pass.
 
 ## Status
 
-Stage 1 (Manual) — 0/3 clean runs. Show Diogo every output; never write to an external
+Stage 1 (Manual) — 0/3 clean runs. Show the user every output; never write to an external
 system.
 
 ## Before you start
@@ -35,14 +35,14 @@ Read all eight reference cards. Do not proceed until you have read every one:
 | Step | Model | Why |
 |------|-------|-----|
 | Extract from a pasted draft — enumerate headings, enumerate claims, strip prose | `haiku` | Purely mechanical; keeps a long document out of Opus context |
-| Interview, all five gates, synthesis, rewrite | `opus` | The taste layer; CONVENTIONS reserves the final write for Opus |
+| Interview, all five gates, synthesis, rewrite | `opus` | The taste layer; reserve the strongest model for judgment and the final write |
 
 Skip the Haiku pass on inputs under roughly 500 words — dispatching a subagent to
 enumerate the claims in a six-line email costs more than it saves.
 
 ## Safety defaults
 
-- Never send, post, or write to Confluence, Notion, or Outlook. Output goes to chat and
+- Never send, post, or write to Confluence, Notion, Outlook, or any other system. Output goes to chat and
   `work/pyramids/` only.
 - Fail loudly. If audit mode cannot infer the question from a draft, say so — do not
   invent a question that makes the draft look coherent.
@@ -59,10 +59,10 @@ One of: a draft to fix, raw material plus a known answer, or a problem with no a
 Ask which mode. Propose one if it is obvious — a pasted draft suggests `audit` — but
 confirm before proceeding.
 
-| Mode | Diogo has | He leaves with |
+| Mode | The user has | They leave with |
 |------|-----------|----------------|
 | `audit` | A draft | Diagnosis → the correct pyramid → rewrite |
-| `author` | Raw material, and he knows his answer | Pyramid → finished prose |
+| `author` | Raw material, and they know their answer | Pyramid → finished prose |
 | `structure` | A problem, and no answer yet | A well-formed question → pyramid. No prose. |
 
 ### 2. Interview — one question per message, never batched
@@ -80,14 +80,14 @@ confirm before proceeding.
 
 Read `problem-definition.md` and walk the five steps, one question per message:
 starting point and context, disturbing event, current undesired result, desired result.
-Then draft the question from those four and have Diogo confirm it.
+Then draft the question from those four and have the user confirm it.
 
 **Stage B — SCQA (`author` and `structure`)**
 
 Read `scqa.md`. Establish Situation, Complication, Question — one at a time. In
-`author` mode, also establish the Answer now: Diogo knows it.
+`author` mode, also establish the Answer now: the user knows it.
 
-In `structure` mode, do not ask for the Answer — he has none yet. It is derived later,
+In `structure` mode, do not ask for the Answer — they have none yet. It is derived later,
 as the governing thought the pyramid produces in step 3, then checked by Gate 2.
 
 In `audit` mode, do not ask: **infer** all four (Situation, Complication, Question,
@@ -106,7 +106,7 @@ Three gates block. Two flag.
 | 4 | The synthesis test — every node says something | `synthesis-test.md` | **Blocks** on high stakes; **flags** on low |
 | 5 | Induction on top, deduction below | `deduction-vs-induction.md` | **Flags** |
 
-When a gate blocks, say which gate and why, and work the problem with Diogo. Do not
+When a gate blocks, say which gate and why, and work the problem with the user. Do not
 route around it.
 
 On Gate 2 in `structure` mode: there is no Answer at Stage B to test, so Gate 2 is
@@ -150,5 +150,5 @@ Write `work/pyramids/YYYY-MM-DD-<slug>.md` using
 
 ## Judgment rules
 
-_(Empty — fill in as Diogo makes corrections. A correction that recurs is a rule that
+_(Empty — fill in as the user makes corrections. A correction that recurs is a rule that
 belongs here.)_
