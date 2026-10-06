@@ -12,7 +12,6 @@ Shareable Claude skills from my personal "self OS" (DiogoOS). Each skill is a fo
 
 Copy a skill folder into `~/.claude/skills/` (or a project's `.claude/skills/`).
 
-Some wording is specific to my setup (the name "Diogo", Notion as a write target); adapt it to yours.
 
 ## Licence
 

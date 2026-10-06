@@ -1,18 +1,18 @@
 ---
 name: agent-builder
-description: Use when you want to design a new DiogoOS skill or agent — it interviews you about the use case and recommends which workflow/agent pattern to use, then produces a SKILL.md skeleton and a rationale doc.
+description: Use when you want to design a new skill or agent — it interviews you about the use case and recommends which workflow/agent pattern to use, then produces a SKILL.md skeleton and a rationale doc.
 ---
 
 # Agent Builder
 
-A Socratic interview skill. You describe a use case; Claude drills with follow-up questions until it can recommend the right pattern from the Anthropic "Building Effective Agents" framework, mapped to DiogoOS conventions.
+A Socratic interview skill. You describe a use case; Claude drills with follow-up questions until it can recommend the right pattern from the Anthropic "Building Effective Agents" framework, mapped to a staged-trust model (Manual → Trusted → Agent).
 
 ## Before you start
 
 Read these reference files (they are the knowledge base for this skill):
 
 1. `skills/agent-builder/references/when-to-use-agents-vs-workflows.md`
-2. `skills/agent-builder/references/diogoos-mapping.md`
+2. `skills/agent-builder/references/stage-mapping.md`
 3. All five files in `skills/agent-builder/references/patterns/`
 
 Do not proceed until you have read all seven files.
@@ -23,7 +23,7 @@ Ask the user to describe the use case in plain language. Then ask Socratic follo
 
 1. **Decomposability:** Are the steps predictable in advance, or do they depend on what earlier steps return?
 2. **Feedback loop:** Does the task need to retry, evaluate, or refine based on output quality?
-3. **Human review tolerance:** Does Diogo need to review every output, spot-check, or just approve?
+3. **Human review tolerance:** Does the user need to review every output, spot-check, or just approve?
 4. **Trigger and frequency:** How does this run — on a schedule, on demand, or triggered by an event?
 
 Do not ask all four questions at once. Follow the thread of the user's answers.
@@ -34,7 +34,7 @@ Once you have enough signal:
 
 1. Name the pattern (or combination of patterns).
 2. Quote the relevant principle from the Anthropic article (use the pattern card's "When to use" section).
-3. Map to DiogoOS using `diogoos-mapping.md`: stage to start at, model tier per step, safety defaults.
+3. Map to the stage model using `stage-mapping.md`: stage to start at, model tier per step, safety defaults.
 4. Note any ambiguities or open questions.
 
 ## Output artifacts
@@ -56,10 +56,10 @@ Template:
 ## Why this pattern
 <Anthropic article principle, quoted or paraphrased from the pattern card>
 
-## DiogoOS mapping
+## Stage mapping
 - **Start at stage:** <Stage 1 / 2>
-- **Model tiers:** <table from diogoos-mapping.md, customised for this use case>
-- **Safety defaults:** <from diogoos-mapping.md>
+- **Model tiers:** <table from stage-mapping.md, customised for this use case>
+- **Safety defaults:** <from stage-mapping.md>
 
 ## Open questions
 <Any ambiguities that need resolving before implementation>
@@ -88,8 +88,8 @@ Stage 1 (Manual) — invoke and review every output before use.
 | <step> | <Haiku/Sonnet/Opus> | <reason> |
 
 ## Safety defaults
-- <safety rule from diogoos-mapping.md>
-- Show Diogo the draft before writing to any external system.
+- <safety rule from stage-mapping.md>
+- Show the user the draft before writing to any external system.
 
 ## Inputs
 - <what the skill needs to run>
@@ -112,7 +112,7 @@ git add docs/superpowers/specs/<rationale-doc>.md skills/<use-case-name>/SKILL.m
 git commit -m "feat: add <use-case-name> agent design + skill skeleton"
 ```
 
-Tell Diogo: "Skeleton is at `skills/<use-case-name>/SKILL.md`. Fill in the Procedure section and run it manually (Stage 1) — promote after 3 clean runs with no corrections."
+Tell the user: "Skeleton is at `skills/<use-case-name>/SKILL.md`. Fill in the Procedure section and run it manually (Stage 1) — promote after 3 clean runs with no corrections."
 
 ## Judgment rules
 

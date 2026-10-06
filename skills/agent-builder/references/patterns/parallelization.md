@@ -19,9 +19,9 @@ Use when:
 - When there's only one sub-task → no parallelization needed
 - When the merge step requires significant judgment and you can't afford Opus × N calls
 
-## DiogoOS stage to start at
+## Stage to start at
 
-**Stage 1 (Manual).** Show Diogo the merged result before any external write. Especially important for voting variants — confirm that the merge logic (union, majority, etc.) is giving the right answer.
+**Stage 1 (Manual).** Show the user the merged result before any external write. Especially important for voting variants — confirm that the merge logic (union, majority, etc.) is giving the right answer.
 
 ## Model tier
 
@@ -37,7 +37,7 @@ Use when:
 - Haiku processes all 10 in parallel: extract action items from each
 - Sonnet merges: deduplicates cross-meeting action items, groups by owner
 - Opus reviews the merged list and flags ambiguous items
-- Diogo approves before writing to Notion
+- The user approves before writing to the external system
 
 ## Judgment rules
 

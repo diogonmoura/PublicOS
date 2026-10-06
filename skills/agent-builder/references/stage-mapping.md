@@ -1,8 +1,8 @@
-# DiogoOS Pattern Mapping
+# Pattern → Stage Mapping
 
-Quick reference: which pattern maps to which DiogoOS stage, model tier, and safety defaults.
+Quick reference: which pattern maps to which stage, model tier, and safety defaults.
 
-## Pattern → DiogoOS mapping
+## Pattern → stage mapping
 
 | Pattern | Start at stage | Orchestration model | Worker model | Safety default |
 |---------|---------------|---------------------|--------------|----------------|
@@ -13,18 +13,18 @@ Quick reference: which pattern maps to which DiogoOS stage, model tier, and safe
 | Evaluator-optimizer | Stage 1 (Manual) | Opus (evaluates) | Sonnet (generates) | Show each iteration; cap at N iterations |
 | Autonomous agent | Stage 1 (Manual) | Opus (all judgment) | Haiku (tool calls) | Human approves every external write; hard iteration cap |
 
-## Stage definitions (from CONVENTIONS.md)
+## Stage definitions
 
-- **Stage 1 (Manual):** Diogo invokes and reviews every output before it's used.
-- **Stage 2 (Trusted):** After ≥3 clean real runs with no corrections. Diogo spot-checks.
-- **Stage 3 (Agent):** Runs on schedule/trigger; Diogo approves output, doesn't produce it.
+- **Stage 1 (Manual):** the user invokes and reviews every output before it's used.
+- **Stage 2 (Trusted):** After ≥3 clean real runs with no corrections. The user spot-checks.
+- **Stage 3 (Agent):** Runs on schedule/trigger; the user approves output, doesn't produce it.
 
 ## Safety defaults by stage
 
-- Stage 1: Never write to Notion or any external system without showing Diogo the draft first.
-- Stage 2: Write, but log what was written and notify Diogo.
-- Stage 3: Write + notify; Diogo approves the run, not each output.
+- Stage 1: Never write to any external system without showing the user the draft first.
+- Stage 2: Write, but log what was written and notify the user.
+- Stage 3: Write + notify; the user approves the run, not each output.
 
 ## Harvester rule (always applies)
 
-Skills that race against deletion (e.g. fetching a transcript before it's purged) must persist raw input to `inbox/` first, then process — never lose the source.
+Skills that race against deletion (e.g. fetching a transcript before it's purged) must persist raw input to a local inbox folder first, then process — never lose the source.

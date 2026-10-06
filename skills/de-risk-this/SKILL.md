@@ -1,25 +1,25 @@
 ---
 name: de-risk-this
-description: Use when Diogo has a product idea, feature request, roadmap, or team setup and wants it interrogated before he commits — the four risks, outcomes instead of features, or a strong/weak team diagnosis.
+description: Use when the user has a product idea, feature request, roadmap, or team setup and wants it interrogated before they commit — the four risks, outcomes instead of features, or a strong/weak team diagnosis.
 ---
 
 # De-Risk This
 
-Applies Marty Cagan's *Inspired* (2nd edition, 2018) to Diogo's own product work.
+Applies Marty Cagan's *Inspired* (2nd edition, 2018) to the user's own product work.
 
-The value of this skill is not "do discovery" — Diogo already knows the concept. The
+The value of this skill is not "do discovery" — the user already knows the concept. The
 value is that **the gates block**. The book's spine is *risks resolved before the
 commitment, not after*, and the only way to honour that in practice is a procedure
 that refuses to return a verdict while a risk is unaddressed.
 
-Assumption: Diogo is the empowered team. This skill applies pure Cagan, with no
+Assumption: the user is the empowered team. This skill applies pure Cagan, with no
 allowance for organisational constraint. If it is ever pointed at a large-org
-situation he does not control, read `references/limits.md` first — the model's
+situation they do not control, read `references/limits.md` first — the model's
 assumptions stop holding.
 
 ## Status
 
-Stage 1 (Manual) — 0/3 clean runs. Show Diogo every output; never write to an
+Stage 1 (Manual) — 0/3 clean runs. Show the user every output; never write to an
 external system.
 
 ## Before you start
@@ -37,9 +37,9 @@ Read all six reference cards. Do not proceed until you have read every one:
 
 | Step | Model | Why |
 |------|-------|-----|
-| Mode classification, when Diogo did not name one | `haiku` | Four-way categorical call on a short input |
+| Mode classification, when the user did not name one | `haiku` | Four-way categorical call on a short input |
 | Extract from a pasted roadmap / spec / doc — enumerate items, dates, owners, claimed outcomes | `haiku` | Purely mechanical; keeps a long document out of Opus context |
-| All gates, interviews, diagnosis, verdicts, and the write to `work/` | `opus` | The taste layer; CONVENTIONS reserves judgment and the final write for Opus |
+| All gates, interviews, diagnosis, verdicts, and the write to `work/` | `opus` | The taste layer; reserve the strongest model for judgment and the final write |
 
 Skip the Haiku extraction pass on inputs under roughly 500 words — dispatching a
 subagent to enumerate the items in a five-line feature request costs more than it
@@ -47,10 +47,10 @@ saves.
 
 ## Safety defaults
 
-- **Never** write to Notion, Linear, Confluence, or any external system. Output goes
+- **Never** write to any external system (Notion, Linear, Confluence, etc.). Output goes
   to chat and `work/product-decisions/` only.
 - **Fail loudly.** If a gate has no evidence, it is BLOCKED. Never infer value from
-  Diogo's enthusiasm, from how well-argued the idea is, or from how much work has
+  The user's enthusiasm, from how well-argued the idea is, or from how much work has
   already gone into it.
 - **Never pass a gate on authority or on request count.** "A customer asked" and
   "this came from leadership" are both zero evidence. Say so.
@@ -65,10 +65,10 @@ saves.
 ## Inputs
 
 One of:
-- An idea, feature, or request Diogo is considering building → `de-risk`
+- An idea, feature, or request the user is considering building → `de-risk`
 - A roadmap, backlog, or plan organised by feature and date → `reframe`
-- A team, project, or way of working he wants examined → `diagnose`
-- A situation he wants to think through out loud → `coach`
+- A team, project, or way of working they want examined → `diagnose`
+- A situation they want to think through out loud → `coach`
 
 ## Procedure
 
@@ -93,13 +93,13 @@ the book exists to prevent.
 For each gate:
 
 1. **State the question** in terms of this specific idea, not in the abstract.
-2. **Ask Diogo what evidence he has.** Do not guess on his behalf.
+2. **Ask the user what evidence they have.** Do not guess on their behalf.
 3. **Judge the evidence** against `references/four-risks.md`. Requests, competitor
    behaviour, conviction and invented business-case numbers are not evidence.
 4. **Close or block.**
    - CLEARED — the evidence is real, and say what it was
-   - ACCEPTED UNKNOWN — Diogo explicitly chooses not to find out; record what it
-     costs if he is wrong
+   - ACCEPTED UNKNOWN — the user explicitly chooses not to find out; record what it
+     costs if they are wrong
    - BLOCKED — and name the **cheapest next move** that could falsify the belief
 
 Gate order and ownership:
@@ -109,18 +109,18 @@ Gate order and ownership:
 | 1 | Value | Will people want this enough to do something costly? |
 | 2 | Usability | Can they figure out how to use it? |
 | 3 | Feasibility | Can this actually be built, with what exists today? |
-| 4 | Business viability | Does it work for Diogo — legal, cost, support, brand, and how it gets sold or distributed? |
+| 4 | Business viability | Does it work for the user — legal, cost, support, brand, and how it gets sold or distributed? |
 
 Then the verdict, one of exactly three:
 
 - **GO** — all four resolved. State what is being committed to and what would make
-  him stop.
+  them stop.
 - **DISCOVER FIRST** — name the single cheapest test, its time box, and what result
   would kill the idea. Do not commit a date.
 - **KILL** — say plainly why, and what would have to change to reopen it.
 
 A verdict is not complete without a **kill criterion**: the specific observation that
-would make Diogo stop. If nothing could, the belief is not falsifiable and the gate
+would make the user stop. If nothing could, the belief is not falsifiable and the gate
 did not really clear.
 
 ### 3. Mode: `reframe`
@@ -137,7 +137,7 @@ did not really clear.
 4. Produce: product vision (if absent, say it is absent — do not invent one),
    strategy as a *sequence* of segments, objectives in OKR form, and a short list of
    genuinely high-integrity date commitments.
-5. Say what Diogo would have to tell anyone expecting the old list.
+5. Say what the user would have to tell anyone expecting the old list.
 
 ### 4. Mode: `diagnose`
 
@@ -153,12 +153,12 @@ did not really clear.
 5. Check the discovery/delivery error asymmetry: is error tolerated in discovery and
    intolerable in delivery, or has it been confused in one direction?
 6. Rank findings by what is changeable **first**, not by severity. A severe finding
-   nobody can move is worth less than a small one he can fix this week.
+   nobody can move is worth less than a small one they can fix this week.
 
 ### 5. Mode: `coach`
 
 Socratic. One question at a time, following the thread of the answers. Do not
-produce a document and do not summarise the book at him.
+produce a document and do not summarise the book at them.
 
 Anchor questions, adapted to the situation:
 - Does this team get a problem with a desired outcome, or a feature with a date?
@@ -173,7 +173,7 @@ Stop when the real problem has been named, not when the questions run out.
 ### 6. Write-up
 
 For `de-risk`, `reframe` and `diagnose`, save to
-`work/product-decisions/YYYY-MM-DD-<slug>.md` after Diogo has seen it in chat.
+`work/product-decisions/YYYY-MM-DD-<slug>.md` after the user has seen it in chat.
 `coach` produces no file.
 
 The file records the decision *and its reasoning*, so that a later run can be

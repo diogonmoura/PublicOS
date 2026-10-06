@@ -16,9 +16,9 @@ Use when:
 - When you just need to fan out the same task across many inputs → use Parallelization
 - When the task is truly open-ended with an unknown "done" condition → consider a full Autonomous agent
 
-## DiogoOS stage to start at
+## Stage to start at
 
-**Stage 1 (Manual).** Show Diogo the orchestrator's plan before dispatching workers. Show each worker's output before passing it back to the orchestrator. This is the pattern most likely to produce surprising behavior — review everything early.
+**Stage 1 (Manual).** Show the user the orchestrator's plan before dispatching workers. Show each worker's output before passing it back to the orchestrator. This is the pattern most likely to produce surprising behavior — review everything early.
 
 ## Model tier
 
@@ -34,7 +34,7 @@ Use when:
 - Orchestrator identifies which files need changes (dynamic — depends on the codebase)
 - Dispatches Sonnet workers, one per file, to make the changes
 - Orchestrator reviews each diff, flags inconsistencies, requests revisions
-- Diogo approves the final set of diffs
+- The user approves the final set of diffs
 
 ## Judgment rules
 

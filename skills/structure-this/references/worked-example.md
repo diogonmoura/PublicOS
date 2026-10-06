@@ -2,9 +2,7 @@
 
 A fictional `audit`-mode run showing the expected `structure-this` output shape,
 including the low-stakes tier behaviour on Gate 4. Entirely invented — no real
-person, company, tool, or project. Synthetic for the same reason
-`meeting-to-tasks/references/example-meeting.md` is: `CONVENTIONS.md` keeps real
-work content out of this repo.
+person, company, tool, or project. Synthetic so that no real work content ends up in this repo.
 
 **Reader**: Priya (named colleague). **Artifact**: email → **low stakes**.
 **Posture**: neutral.

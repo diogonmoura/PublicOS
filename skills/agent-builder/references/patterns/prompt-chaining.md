@@ -15,9 +15,9 @@ Use when:
 - When you need to retry or refine based on quality evaluation → use Evaluator-optimizer
 - When steps are independent and can run simultaneously → use Parallelization
 
-## DiogoOS stage to start at
+## Stage to start at
 
-**Stage 1 (Manual).** Show each intermediate output to Diogo before passing it to the next step. Once the chain runs cleanly 3 times with no corrections, promote to Stage 2.
+**Stage 1 (Manual).** Show each intermediate output to the user before passing it to the next step. Once the chain runs cleanly 3 times with no corrections, promote to Stage 2.
 
 ## Model tier
 
@@ -25,15 +25,15 @@ Use when:
 |------|-------|-----|
 | Mechanical extraction / formatting | Haiku | No judgment needed |
 | Drafting / summarising | Sonnet | Quality matters but not Opus-level |
-| Final judgment / write to Notion | Opus | Taste layer; this is what Diogo would do |
+| Final judgment / write to the external system | Opus | Taste layer; this is what you would do yourself |
 
 ## Worked example
 
 **Meeting transcript → meeting note pipeline:**
 1. Haiku: extract raw action items and attendees from transcript
-2. Sonnet: draft the meeting note in Notion format
+2. Sonnet: draft the meeting note in the target format
 3. Opus: review the note, infer owners, flag ambiguous items
-4. (Human) Diogo approves before writing to Notion
+4. (Human) The user approves before writing to the external system
 
 ## Judgment rules
 
